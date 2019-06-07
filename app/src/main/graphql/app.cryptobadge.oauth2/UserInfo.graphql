@@ -1,0 +1,9 @@
+query UserInfo{
+  me {
+    id
+    name
+    email
+    path
+    resourceUrl
+  }
+}

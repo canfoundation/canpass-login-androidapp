@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.apollographql.android'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "app.cryptobadge.oauth2"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+                'appAuthRedirectScheme': 'app.cryptobadge.oauth2'
+        ]
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+apollo {
+    customTypeMapping = [
+            "URI" : "java.lang.String"
+    ]
+}
+
+project.ext.glideVersion = '4.7.1'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:${rootProject.supportLibVersion}"
+    implementation "com.android.support:design:${rootProject.supportLibVersion}"
+    implementation "com.github.bumptech.glide:glide:${project.glideVersion}"
+    implementation 'net.openid:appauth:0.7.1'
+    implementation 'com.apollographql.apollo:apollo-runtime:1.0.0'
+    implementation "com.apollographql.apollo:apollo-android-support:1.0.0"
+    implementation 'com.squareup.okhttp3:okhttp:3.12.2'
+}
