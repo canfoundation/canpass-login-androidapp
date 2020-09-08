@@ -1,6 +1,6 @@
-# CryptoBadge Login for the Android app
+# CANpass Login for the Android app
 
-This is a simple example Android app written in [AppAuth](https://appauth.io/) and [Apollo GraphQL](https://www.apollographql.com/), and demonstrates how to 'Login with CryptoBadge' for an Android app.
+This is a simple example Android app written in [AppAuth](https://appauth.io/) and [Apollo GraphQL](https://www.apollographql.com/), and demonstrates how to 'Login with CANpass' for an Android app.
 
 ## Configuration
 
@@ -18,8 +18,8 @@ This is a simple example Android app written in [AppAuth](https://appauth.io/) a
 #### In the file `Configuration.java`
 
 ```java
-String AuthorizationEndpointURL = "https://accounts.cryptobadge.app/oauth2/authorize";
-String TokenEndpointURL = "https://accounts.cryptobadge.app/oauth2/token";
+String AuthorizationEndpointURL = "https://canpass.me/oauth2/authorize";
+String TokenEndpointURL = "https://canpass.me/oauth2/token";
 String GraphQlEndpointURL = "https://api.cryptobadge.app/graphql";
 String ClientID = "YOUR_CLIENT_ID";
 String RedirectURI = "app.cryptobadge.oauth2:/oauth2redirect";

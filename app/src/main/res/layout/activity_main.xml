@@ -21,7 +21,7 @@
             android:layout_marginRight="64dp"
             android:layout_marginLeft="64dp"
             android:background="#0585ff"
-            android:text="Login with Cryptobadge"
+            android:text="Login with CANpass"
             android:textSize="20sp"
             android:gravity="center"
             android:textColor="@android:color/white"

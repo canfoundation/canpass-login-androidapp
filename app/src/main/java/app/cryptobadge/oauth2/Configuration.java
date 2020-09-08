@@ -3,8 +3,8 @@ package app.cryptobadge.oauth2;
 import junit.framework.Assert;
 
 public class Configuration {
-    static final String AuthorizationEndpointURL = "https://accounts.cryptobadge.app/oauth2/authorize";
-    static final String TokenEndpointURL = "https://accounts.cryptobadge.app/oauth2/token";
+    static final String AuthorizationEndpointURL = "https://canpass.me/oauth2/authorize";
+    static final String TokenEndpointURL = "https://canpass.me/oauth2/token";
     static final String GraphQlEndpointURL = "https://api.cryptobadge.app/graphql";
     static final String ClientID = "YOUR_CLIENT_ID";
     static final String RedirectURI = "app.cryptobadge.oauth2:/oauth2redirect";
@@ -12,11 +12,11 @@ public class Configuration {
 
     public static void validate() {
         Assert.assertSame("Should not change the authorization endpoint.",
-                "https://accounts.cryptobadge.app/oauth2/authorize",
+                "https://canpass.me/oauth2/authorize",
                 AuthorizationEndpointURL);
 
         Assert.assertSame("Should not change the token endpoint.",
-                "https://accounts.cryptobadge.app/oauth2/token",
+                "https://canpass.me/oauth2/token",
                 TokenEndpointURL);
 
         Assert.assertSame("Should not change the GraphQL endpoint.",
